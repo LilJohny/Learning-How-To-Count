@@ -1,7 +1,7 @@
 {% extends "main.j2" %}
 
 {% block main %}
-    <div class="overlay"></div>
+      <div class="overlay"></div>
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
@@ -17,6 +17,7 @@
     </div>
   </header>
 
+  <!-- Post Content -->
   <article>
     <div class="container">
       <div class="row">
@@ -33,11 +34,7 @@
             <br>
           <h3>Problem 1</h3>
 
-          If the coin is tossed n times, show that the probability that it shows heads on an
-
-          odd number of tosses (and tails on the rest) is ½?
-
-
+          <p>If we flip a fair coin 9 times, and the flips are independent, what's the probability that we get heads exactly 6 times?</p>
           </p>
         </div>
 
@@ -46,4 +43,18 @@
   </article>
 
   <hr>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']]
+    }
+  };
+</script>
+<script id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
 {% endblock %}
