@@ -44,10 +44,14 @@
           </li>
           {%if not user.is_authenticated%}
           <li class="nav-item">
-            <a class="nav-link" href="/">Log In</a>
+            <a class="nav-link" href="/login_form">Log In</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/">Sign Up</a>
+          </li>
+          {% else %}
+          <li class="nav-item">
+            <a class="nav-link" href="/logout">Log Out</a>
           </li>
           {% endif %}
         </ul>
