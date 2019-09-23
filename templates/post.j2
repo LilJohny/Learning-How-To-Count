@@ -1,0 +1,35 @@
+{% extends "main.j2" %}
+
+{% block main %}
+
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="post-heading">
+            <h1>{{ title }}</h1>
+            <h2 class="subheading">{{ subtitle }}</h2>
+            <span class="meta">Posted by
+              <a href="#">{{ author }}</a>
+              on {{ date }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <article>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <img class="post-image" src="{{ image-source}}">
+          <p> {{ text }}</p>
+          <a href="{{ video-link }}"> Watch a video here </a>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <hr>
+
+{% endblock %}
