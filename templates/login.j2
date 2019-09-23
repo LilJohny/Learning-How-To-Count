@@ -1,0 +1,33 @@
+{% extends "main.j2" %}
+
+{% block body %}
+
+<header class="masthead" style="background-image: url('img/home-bg.jpg')">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <div class="site-heading">
+                    <h2>Please, log in</h2>
+                    <form method="post" action="/user_login">
+                        <input class="login-input" type="text" required placeholder="Username" name="username">
+                        <br>
+                        <input class="login-input" type="password" required placeholder="Password" name="password">
+                        <br>
+                        <button type="submit" value="submit" class="login-submit btn btn-outline-light">Log in</button>
+                    </form>
+                    <span class="subheading">
+                        <span class="subheading-login">
+                        <br>
+                        Don't have an account?
+                        <br>
+                        <a href="contact.html">Sign Up</a>
+                        </span>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+{% endblock %}

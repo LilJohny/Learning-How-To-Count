@@ -1,0 +1,45 @@
+{% extends "main.j2" %}
+
+{% block main %}
+
+ <header class="masthead" style="background-image: url('img/home-bg.jpg')">
+   <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="site-heading">
+            <h1>P&S</h1>
+            <span class="subheading">Learn it the same way as wise ones do</span>
+          </div>
+        </div>
+      </div>
+   </div>
+ </header>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-md-10 mx-auto">
+
+    {% for article in articles %}
+    <div class="post-preview">
+       <a href="{{ article.link }}">
+          <h2 class="post-title">
+            {{ article.title }}
+          </h2>
+          <h3 class="post-subtitle">
+            {{ article.subtitle }}
+          </h3>
+        </a>
+        <p class="post-meta">Posted by
+          <a href="#">{{ article.author }}</a>
+          {{ article.date }}</p>
+      </div>
+      <hr>
+    {% endfor %}
+
+    </div>
+  </div>
+</div>
+
+{% endblock %}
